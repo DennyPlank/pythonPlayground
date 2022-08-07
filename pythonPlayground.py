@@ -35,15 +35,19 @@
 
 # Add leet code stuff when you're ready here
 
-inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
+# basic pizza menu 
 
-inventory_len = len(inventory)
-first = inventory[0]
-last = inventory[-1]
-inventory_2_6 = inventory[2:6]
-first_3 = inventory[:3]
-twin_beds = inventory.count('twin bed')
-removed_item = inventory.pop(4)
-inventory.insert(10, "19th Century Bed Frame")
-inventory = sorted(inventory)
-print(inventory)
+toppings = ["pineapple", "pepperoni", "cheese", "sausage", "olives", "anchovies", "mushrooms"]
+prices = [2, 6, 1, 3, 3, 7, 2]
+num_two_slices = prices.count(2)
+num_pizzas = len(toppings)
+# print(num_two_slices)
+
+greeting = "We sell " + str(num_pizzas) + " different kinds of pizza!"
+
+print(greeting)
+
+menu = [["pepperoni", 2], ["pineapple", 6], ["cheese", 1], ["sasuage", 3], ["olives", 2], ["anchovies", 7], ["mushrooms", 2]]
+
+menu.sort()
+print(menu)
