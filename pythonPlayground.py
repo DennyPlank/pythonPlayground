@@ -15,4 +15,13 @@ kids = ["Darryl", "Emery", "Ellie"]
 ages = [8, 6, 4]
 
 kids_and_ages = zip(kids, ages)
-print(list(kids_and_ages))
+# print(list(kids_and_ages))
+
+# First python loops 
+
+# For Loops
+
+statement = "Loop number"
+
+for x in range(100):
+    print(statement + " " + str(x))
