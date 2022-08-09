@@ -1,54 +1,17 @@
-# # Playing with Tuples
+# First functions used in python
+current_budget = 3500.75
+shirt_expense = 9
 
-# my_first_tupal = ("Dennis", 27, "Male")
+def print_remaining_budget(budget):
+  print("Your remaining budget is: $" + str(budget))
 
-# name, age, gender = my_first_tupal
-# # print(my_first_tupal)
-# # print(name)
-# # print(age)
-# # print(gender)
-# # print(name + " " + str(age) + " " + gender)
+print_remaining_budget(current_budget)
 
-# # Playing with zips()
+# Write your code below: 
 
-# kids = ["Darryl", "Emery", "Ellie"]
-# ages = [8, 6, 4]
+def deduct_expense(budget, expense):
+  return budget - expense
 
-# kids_and_ages = zip(kids, ages)
-# # print(list(kids_and_ages))
+new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
 
-# # First python loops 
-
-# # For Loops
-
-# statement = "Loop number"
-
-# for x in range(100):
-#     print(statement + " " + str(x))
-
-# Hairstyles
-hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
-
-prices = [30, 25, 40, 20, 20, 35, 50, 35]
-
-last_week = [2, 3, 5, 8, 4, 4, 6, 2]
-
-total_price = sum(prices)
-average_price = total_price / len(prices)
-
-print("Average Haircut Price: " + str(average_price))
-
-new_prices = [price - 5 for price in prices]
-
-print(new_prices)
-
-total_revenue = 0
-for i in range(0, len(hairstyles)):
-  revenue = prices[i] * last_week[i]
-  total_revenue += revenue
-
-print("Total Revenue: " + str(total_revenue))
-average_daily_revenue = total_revenue / 7
-print(average_daily_revenue)
-
-under_30 = [price for price in prices if price < 30];
+print_remaining_budget(new_budget_after_shirt)
