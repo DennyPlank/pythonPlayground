@@ -5,7 +5,7 @@ train_distance = 100
 bomb_mass = 1
 c = 3*10**8
 
-# Write your code below: 
+# Write your code below
 def f_to_c(f):
   return (f - 32) * (5/9)
 
