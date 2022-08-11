@@ -1,9 +1,8 @@
-def over_nine_thousand(lst1):
-  i = 0
+def over_nine_thousand(lst):
   count = 0
-  while count <= 9000:
-    count += lst1[i] 
-    i += 1
+  for num in lst:
+      if count <= 9000:
+        count += num
   return count
 #Uncomment the line below when your function is done
-print(over_nine_thousand([9000, 900, 120, 5000]))
+print(over_nine_thousand([8000, 900, 120, 5000]))
