@@ -1,11 +1,7 @@
 destinations = ["Paris, France", "Shanghai, China", "Los Angeles, USA", "Sao Paulo, Brazil", "Cairo, Egypt"]
-
 attractions = [[], [], [], [], []]
-
 test_traveler = ['Erin Wilkes', 'Sao Paulo, Brazil', ['historical site', 'art']]
-
 user = ['Dereck Smill', 'Paris, France', ['monument']]
-
 
 def get_dest_index(dest):
   dest_index = destinations.index(dest)
@@ -34,7 +30,6 @@ add_attractions("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical si
 add_attractions("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
 
 def find_attractions(dest, interests):
-  # attractions_with_interest = []
   possible_attractions = []
   attractions_in_city = attractions[get_dest_index(dest)]
   for att in attractions_in_city:
@@ -42,7 +37,6 @@ def find_attractions(dest, interests):
     for ints in interests:
       if ints in attraction_tags:
         possible_attractions.append(att[0])
-  # attractions_with_interest.append(possible_attractions)
   return possible_attractions
 
 # Test for attraction logic
@@ -58,7 +52,10 @@ def get_attractions_for_traveler(traveler):
 results = get_attractions_for_traveler(user)
 interests_string = "Hi " + user[0] + ", we think you'll like these places around " + user[1] + ":"
 
+def return_results():
+   print(interests_string)
+   for res in results:
+    print(res)
 
-print(interests_string)
-for res in results:
-  print(res)
+return_results()
+
